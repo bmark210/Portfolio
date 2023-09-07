@@ -28,9 +28,10 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  class="rounded-lg focus:outline focus:outline-2 focus:outline-black bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  id={id}
 >
-  <a id={id} href={url} target={target}>
+  <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
         img && (
