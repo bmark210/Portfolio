@@ -1,0 +1,48 @@
+---
+import { changeLanguage } from "i18next";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+changeLanguage("ru");
+---
+
+<BaseLayout title="About Me" sideBarActiveItemID="about-me">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Обо мне</div>
+  </div>
+  <div class="mb-2 text-justify text-lg">
+    Привет. Я Марк Балтенко. Мне 20 лет. Я живу в Молдове. Последний год я
+    посвятил веб-разработке и узнал много интересного в этой области. Моя цель —
+    создавать красивые и функциональные веб-приложения, которые помогают людям
+    выполнять повседневные задачи и обеспечивают отличный пользовательский опыт.
+    Я изучал различные технологии и инструменты, такие как HTML, CSS,
+    JavaScript, TypeScript, React, Node.js и многие другие. Я также знаком с
+    работой с базами данных и разработкой серверных приложений. В мире
+    веб-разработки всегда есть что-то новое и интересное, и я намерен продолжать
+    расширять свои знания и навыки.
+  </div>
+  <div class="mb-10 text-justify text-lg">
+    Оценить мой опыт работы с веб-приложениями можно в
+
+    <a class="underline" href="/ru/projects">следующей вкладке.</a>
+  </div>
+  <div class="w-96">
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Навыки</div>
+    </div>
+    <ul class="list-disc md:columns-2 my-3 columns-2 mx-6 text-lg">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>SCSS</li>
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>Tailwindcss</li>
+      <li>Redux / toolkit</li>
+      <li>Vite</li>
+      <li>Zustand</li>
+      <li>Node.js</li>
+      <li>Express</li>
+      <li>Firestore</li>
+    </ul>
+  </div>
+</BaseLayout>

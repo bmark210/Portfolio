@@ -1,13 +1,33 @@
 ---
+import i18next from "i18next";
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300";
+
+const lang = i18next.language;
+const base = lang === "en" ? "" : `/${lang}`;
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-  <li><a class="py-3 text-base" id="home" href="/home">Home</a></li>
-  <li><a class="py-3 text-base" id="about-me" href="/about-me">About me</a></li>
-  <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-  <li><a class="py-3 text-base" id="contact" href="/contact">Contact</a></li>
+  <li>
+    <a class="py-3 text-base" id={`${base}/home`} href={`${base}/home`}
+      >{base ? "Дом" : "Home"}</a
+    >
+  </li>
+  <li>
+    <a class="py-3 text-base" id={`${base}/about-me`} href={`${base}/about-me`}
+      >{base ? "О себе" : "About me"}</a
+    >
+  </li>
+  <li>
+    <a class="py-3 text-base" id={`${base}/projects`} href={`${base}/projects`}
+      >{base ? "Проекты" : "Projects"}</a
+    >
+  </li>
+  <li>
+    <a class="py-3 text-base" id={`${base}/contact`} href={`${base}/contact`}
+      >{base ? "Контакты" : "Contacts"}</a
+    >
+  </li>
 </ul>
 
 <script

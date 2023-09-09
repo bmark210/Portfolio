@@ -1,0 +1,55 @@
+---
+import { changeLanguage } from "i18next";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Card from "../../components/Card.astro";
+
+changeLanguage("ru");
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Привет 👋</div>
+    <div class="text-5xl font-bold">Я Марк Балтенко</div>
+    <div class="text-3xl py-3 font-bold">Фронтенд-разработчик</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Я работаю над созданием интерфейсных приложений. Люблю современные
+        технологии развития, хорошую музыку и спорт. Здесь я постараюсь
+        рассказать о своем опыте и навыках работы с фронтендом.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a href="/ru/contact" target="_self" class="btn btn-outline">Связаться!</a
+      >
+    </div>
+  </div>
+
+  <div class="flex justify-between items-center px-6">
+    <div class="text-3xl w-full font-bold mb-5">
+      Мои последние проекты {"</>"}
+    </div>
+    <a href="/ru/projects" class="btn">
+      <span>все</span><span class="text-lg">►</span>
+    </a>
+  </div>
+  <div class="w-full flex flex-row flex-wrap">
+    <Card
+      target="_self"
+      href="/ru/projects#instagram-clone2.0"
+      title="Инстаграм-клон 2"
+      img="/instagram-clone2.png"
+    />
+    <Card
+      target="_self"
+      href="/ru/projects#instagram-clone"
+      title="Инстаграм-клон"
+      img="/instagram-clone1.png"
+    />
+    <Card
+      target="_self"
+      href="/ru/projects#mini-store"
+      title="мини-магазин"
+      img="/mini-store.png"
+    />
+  </div>
+</BaseLayout>

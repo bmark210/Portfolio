@@ -1,25 +1,29 @@
 ---
+import { changeLanguage } from "i18next";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+changeLanguage("en");
 ---
 
 <BaseLayout title="About Me" sideBarActiveItemID="about-me">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">About Me</div>
+    <div class="text-3xl w-full font-bold">About me</div>
   </div>
   <div class="mb-2 text-justify text-lg">
     Hello. I'm Mark Baltenko. I am 20 years old. I live in Moldova. I spent the
     last year in web development and learned a lot of interesting things in this
     area. My goal is to create amazing and functional web applications that help
     people with their daily tasks and provide a great user experience. I have
-    learned various technologies and tools such as HTML, CSS, JavaScript, React,
-    Node.js, and many more. I am also familiar with working with databases and
-    developing back-end applications. There is always something new and exciting
-    to learn in the world of web development and I intend to keep expanding my
-    knowledge and skills.
+    learned various technologies and tools such as HTML, CSS, JavaScript,
+    TypeScript, React, Node.js, and many more. I am also familiar with working
+    with databases and developing back-end applications. There is always
+    something new and exciting to learn in the world of web development and I
+    intend to keep expanding my knowledge and skills.
   </div>
   <div class="mb-10 text-justify text-lg">
-    You can evaluate my experience with web applications on my projects in the
-    <a class="bg-gray-600 text-white px-1 rounded" href="/projects">next tab</a>
+    You can evaluate my experience with web applications in the
+
+    <a class="underline" href="/projects">next tab</a>
   </div>
   <div class="w-96">
     <div class="mb-5">

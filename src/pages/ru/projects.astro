@@ -1,0 +1,44 @@
+---
+import { changeLanguage } from "i18next";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+
+changeLanguage("ru");
+---
+
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div>
+    <p class="text-3xl w-full font-bold mb-5">Проекты</p>
+  </div>
+  <HorizontalCard
+    id="instagram-clone2.0"
+    title="Инстаграм-клон 2"
+    img="/instagram-clone2.png"
+    desc="В проекте реализована авторизация, лента, создание постов, добавление комментариев и лайков, редактирование профиля, поиск других пользователей."
+    url="https://instagram-clone-frontend-blush.vercel.app"
+    badge="NEW"
+    tags={["React", "Tailwind", "Typescript", "Node.js", "Redux"]}
+    codeLink="https://github.com/bmark210/instagram-clone-frontend/"
+    bdCodeLink="https://github.com/bmark210/instagram-server"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    id="instagram-clone"
+    title="Инстаграм-клон"
+    img="/instagram-clone1.png"
+    desc="В проекте реализована авторизация, лента, создание постов и редактирование профиля."
+    tags={["React", "Tailwind", "Firebase", "Zustand"]}
+    url="https://instagram-clone-e904f.web.app/"
+    codeLink="https://github.com/bmark210/instagram-clone"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    id="mini-store"
+    title="мини-магазин"
+    img="/mini-store.png"
+    desc="В проекте реализовано добавление товаров в корзину, имитация заказа и поиска товаров."
+    tags={["React"]}
+    url="https://mini-store2-0.vercel.app/"
+    codeLink="https://github.com/bmark210/mini-store2.0"
+  />
+</BaseLayout>
